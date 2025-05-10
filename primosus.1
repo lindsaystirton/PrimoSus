@@ -1,0 +1,48 @@
+.TH PRIMOSUS 1 "May 2025" "Version 0.3" "PrimoSus Manual"
+.SH NAME
+primosus - Command-line tool to search the University of Sussex Library catalog.
+
+.SH SYNOPSIS
+.B primosus
+[OPTIONS] [SEARCH TERM]
+
+.SH DESCRIPTION
+PrimoSus is a command-line utility to search the University of Sussex Library catalog from the terminal.
+
+.SH OPTIONS
+.TP
+.B -t, --title
+Search by title.
+.TP
+.B -a, --author
+Search by author.
+.TP
+.B -s, --subject
+Search by subject.
+.TP
+.B -k, --keyword
+General keyword search (default).
+.TP
+.B -i, --item
+Specify item type (book, article, journal, thesis).
+.TP
+.B -h, --help
+Display this help message.
+
+.SH EXAMPLES
+.B primosus -a "Lindsay Stirton" -t "Courts" -i book
+Search for books by Lindsay Stirton with "Courts" in the title.
+
+.SH INSTALLATION
+Place the man page file (primosus.1) in one of the following directories:
+.B /usr/local/share/man/man1/
+.B /usr/share/man/man1/
+
+Update the man database:
+.B sudo mandb
+
+.SH AUTHOR
+Lindsay Stirton - University of Sussex
+
+.SH LICENSE
+This software is licensed under the GNU Public License.
