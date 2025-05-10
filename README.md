@@ -52,10 +52,10 @@ Search for books by Jeremy Webber related to the constitution:
 primosus -a "Jeremy Webber" -t "Constitution" -i book
 ```
 
-Search for articles by Lindsay Stirton on public law:
+Search for articles by Lindsay Stirton with "basic income" in the title:
 
 ```
-primosus -a "Lindsay Stirton" -i article
+primosus -a "Lindsay Stirton" -t "basic income" -i article
 ```
 
 ## Contributing
