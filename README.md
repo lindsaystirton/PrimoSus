@@ -1,67 +1,39 @@
-# PrimoSus
+PrimoSus
 
-PrimoSus is a command-line utility to search the University of Sussex library catalogue directly from the terminal. It is designed for users who frequently use the library and prefer working in a Unix environment.
+PrimoSus is a command-line utility to search the University of Sussex Library catalog directly from the terminal.
+Features
 
-## Features
+Search by title, author, subject, keyword, or item type (book, article, journal, thesis).
+Supports multiple search terms combined using the advanced search page.
+Easy integration with the terminal for quick library lookups.
+Installation
 
-* Search by title, author, subject, keyword, or item type (book, article, journal, thesis)
-* Open results directly in the system's default web browser
-* Simple and efficient interface
-
-## Installation
-
-Clone the repository from GitHub:
-
-```
+Clone the repository:
 git clone https://github.com/lindsaystirton/PrimoSus.git
-```
-
 Make the script executable:
-
-```
 chmod +x primosus.sh
-```
+Move it to your PATH:
+sudo mv primosus.sh /usr/local/bin/primosus
+Man Page Installation
+Move the man page file to a system directory for man pages:
+sudo mv primosus.1 /usr/local/share/man/man1/
+Update the man database:
+sudo mandb
+You can now view the man page using:
+man primosus
+Usage
 
-Add PrimoSus to your PATH for easier access:
+primosus [OPTIONS] <search term>
+Options:
+-t, --title : Search by title.
+-a, --author : Search by author.
+-s, --subject : Search by subject.
+-k, --keyword : General keyword search (default).
+-i, --item : Specify item type (book, article, journal, thesis).
+-h, --help : Display help message.
+Examples:
+Search for articles by Lindsay Stirton with "Basic Income" in the title:
+primosus -a "Lindsay Stirton" -t "Basic Income" -i article
+License
 
-```
-echo 'export PATH="$PATH:~/Scripts/PrimoSus"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-## Usage
-
-```
-primosus [options] <search term>
-```
-
-### Options:
-
-* `-t`, `--title`    : Search by title
-* `-a`, `--author`   : Search by author
-* `-s`, `--subject`  : Search by subject
-* `-k`, `--keyword`  : General keyword search (default)
-* `-i`, `--item`     : Search by item type (book, article, journal, thesis)
-* `-h`, `--help`     : Display help message
-
-## Examples
-
-Search for books by Jeremy Webber related to the constitution:
-
-```
-primosus -a "Jeremy Webber" -t "Constitution" -i book
-```
-
-Search for articles by Lindsay Stirton with "basic income" in the title:
-
-```
-primosus -a "Lindsay Stirton" -t "basic income" -i article
-```
-
-## Contributing
-
-Contributions are welcome! Feel free to submit a pull request or open an issue to discuss new features or improvements.
-
-## License
-
-Licensed under the GNU General Public License v3.0. See the LICENSE file for more details.
+This project is licensed under the GNU Public License.
